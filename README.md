@@ -19,6 +19,15 @@ $ sudo pip install django~=1.10.0
 - Create Django project
 ```
 $ source djangoEnv/bin/activate
-# django-admin startproject mysite .
-
+$ django-admin startproject mysite .
 ```
+
+> No module named Django Error
+> $ python -m pip install django
+
+- Set database and Run server
+```
+$ python manage.py migrate   # set database
+$ python manage.py runserver $IP:$PORT # run server for c9
+```
+
