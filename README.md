@@ -2,6 +2,34 @@
 - take place in [Cloud9](https://c9.io)
 - for AskDjango Hackathon
 
+----
+
+### 2017-06-27
+- How to run server on c9
+```
+$ python manage.py runserver $IP:$PORT
+```
+- Add admin 
+    - url: http://django-tutorial-njir.c9users.io/admin/login/?next=/admin/
+- Create super user(admin)
+```
+$ python manage.py createsuperuser
+```
+
+### 2017-06-23
+- Create Model
+```
+$ source djangoEnv/bin/activate
+$ python manage.py startapp ModelName
+```
+
+- Add Post model to DB
+```
+$ python manage.py makemigrations blog # notice to Django
+$ python manage.py migrate blog
+```
+
+
 ### 2017-06-22
 - Set Virtual environment
 ```
@@ -32,17 +60,3 @@ $ python -m pip install django
 $ python manage.py migrate   # set database
 $ python manage.py runserver $IP:$PORT # run server for c9
 ```
-
-### 2017-06-23
-- Create Model
-```
-$ source djangoEnv/bin/activate
-$ python manage.py startapp ModelName
-```
-
-- Add Post model to DB
-```
-$ python manage.py makemigrations blog # notice to Django
-$ python manage.py migrate blog
-```
-
