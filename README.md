@@ -4,6 +4,29 @@
 
 ----
 
+### 2017-06-30
+- Dynamic data
+
+```python
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/post_list.html', {'posts': posts})
+```
+
+- Template
+
+```html
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+```
+
+
+
+
 ### 2017-06-29
 - Regex
     - ^: 문자열이 시작할 떄
